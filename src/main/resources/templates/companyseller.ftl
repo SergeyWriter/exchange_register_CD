@@ -63,17 +63,16 @@
         <td>${companyseller.sharesToSellNumber}</td>
         <td>${companyseller.sharePrice}</td>
         <td>
-            <form method="post" action="update" enctype="multipart/form-data">
+            <form method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                    <a class="btn btn-secondary" href=
-                            "#">Изменить</a>
+                    <a class="btn btn-secondary" href="#">Изменить</a>
                 </div>
             </form>
         </td>
         <td>
-            <form action="delete" enctype="multipart/form-data">
-                <a class="btn btn-secondary" href=
-                        "/delete/${companyseller.companySellerTaxpayerIdentificationNumber}">Удалить</a>
+            <form method="post" action="/companyseller/delete/${companyseller.companySellerTaxpayerIdentificationNumber}"
+                  enctype="multipart/form-data">
+                <button type="submit" class="btn btn-secondary">Удалить</button>
             </form>
         </td>
     </tr>
@@ -81,3 +80,4 @@
     </tbody>
 </table>
 </@p.page>
+
